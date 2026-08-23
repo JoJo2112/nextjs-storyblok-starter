@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "objectWrap": "preserve",
+  "singleAttributePerLine": true,
+  "overrides": [
+    {
+      "files": [
+        "**/*.css",
+        "**/*.scss",
+        "**/*.html"
+      ],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-css-order",
+    "prettier-plugin-organize-imports"
+  ],
+  "cssDeclarationSorterOrder": "alphabetical"
+}

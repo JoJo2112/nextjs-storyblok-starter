@@ -3,23 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "schema:validate": "storyblok schema validate .storyblok/schema/schema.ts",
+    "schema:diff": "storyblok schema push .storyblok/schema/schema.ts --dry-run",
+    "schema:push": "storyblok schema push .storyblok/schema/schema.ts",
+    "schema:pull": "storyblok schema init"
   },
   "dependencies": {
+    "@storyblok/react": "^7.3.0",
     "next": "16.3.2",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@storyblok/schema": "^0.4.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.2",
+    "prettier-plugin-css-order": "^2.2.0",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "storyblok": "^4.22.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
